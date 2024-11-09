@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("location: registrarse.php?error=La contraseña es requerida&$datosUsuario");
             exit();
         } else {
-            $clave = md5($clave);
+            // $clave = md5($clave); encriptado esta mal
 
             $sql = "SELECT * FROM users WHERE User = '$user'";
             $query = $conexion->query($sql);
